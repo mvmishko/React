@@ -1,0 +1,37 @@
+
+  .animation-slide {
+    display: block;
+  }
+
+ .animation-slide-appear {
+    transform: translate3d(200%, 0, 0);
+    opacity: 0.2;
+  }
+
+  .animation-slide-appear-active {
+    transition: transform 500ms, opacity 500ms;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  .animation-slide-enter {
+    transform: translate3d(200%, 0, 0);
+    opacity: 0.2;
+  }
+
+  .animation-slide-enter-active {
+    transition: transform 500ms, opacity 500ms;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  .animation-slide-leave {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  .animation-slide-leave-active {
+    transition: transform 500ms, opacity 500ms;
+    transform: translate3d(-200%, 0, 0);
+    opacity: 0.2;
+  }
