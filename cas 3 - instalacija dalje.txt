@@ -1,0 +1,50 @@
+* app je folder aplikacije
+* ukljucenje html webpack dopunom webpack.config.js
+	npm install --save-dev html-webpack-plugin
+* pravimo html u koji ce webpack ubaciti definisanu konfiguraciju
+	Precica za prazan html: !+tab
+* dodajemo pokretacki skript u package.json
+	"scripts":  "production": "webpack -p"
+* pokrenemo npm run production koji napravi folder dist i u njemu index_bundle.js i kopiju index.html sa umetnutim index_bundle.js
+
+* pokretacki skript za dev okruzenje
+	"start": "webpack-dev-server"
+
+* struktura aplikcaije: (stablo sa jednim korenom)
+	root -> app -> header
+		|
+		-> racun
+			|
+			->stavke
+
+* ovim je zavrsen setup projekta i pokretanje razvojnog okruzenja
+------------------------------------------------------------------
+* dodajemo sadrzaj u app/index.js (nova React klasa u kojoj je render funkcija koja vraca react element)
+	import React from 'react'
+	import ReactDOM from 'react-dom'
+	var App = React.createClass({
+    		render: function(){
+        		return <span>Pozdrav iz React-a</span>
+    		}
+	})
+	// Gde da se renderuje sadrzaj - to je div u index.html
+ 	ReactDOM.render(<App />, document.getElementById('root'))
+
+
+* pokretanje aplikacije npm run start
+	- kliknemo na link localhost:8080 da bi videli renderovanu stranu
+* dodajemo source mape u webpackConfig - devtool, potrebno za debug index_bundle.js koji je spakovao webpack
+
+* Ako sad promenimo sadrzaj index.js automatski se uradi refresh strane u browseru
+* bolje resenje je full hot reload
+	npm install --save react-hot-loader
+* ukljucujemo ga u projekat dodavanjem entry stavki pored postojece './app/index.js'
+* na vrh fajla dodajemo require
+* dodajemo nove plugins stavke za rad hotmodula-a
+* dodajemo devServer propertie
+
+* babelrc	dodajemo nove presets
+* npm install babel-preset-es2015 itd (stage-2)
+* dodajemo u index.js import za hotloader i promeniti nacin renderovanja (prethodni komentarisati)
+* prebacimo deo koda u novi folder components/App.js
+

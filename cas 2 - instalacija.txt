@@ -1,0 +1,48 @@
+* nodejs instalacija
+* Projet folder u svom folderu
+* VS Code Terminal u folderu 
+* npm init
+* npm install --save react
+	- u package.json se upisalo zbog --save se prevukli i svi dependences paketi u node-module:
+		"dependencies": {
+    "react": "^15.4.2"
+  }				^ poslednja kompatibilna verzija
+* za prenos app je dovoljno sto u package.json pisu dependences ne prenosi se celi node-modules folder
+
+* npm install --save react react-dom
+		- "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+
+* npm install --save-dev webpack
+	webpack (pakovanje-build react app u 1 fajl za produkciju - bandlovanje)
+		- "devDependencies": {
+    "webpack": "^2.3.1"
+  }
+
+
+* drugi nacin instalacije je rucno dodavanje dependencies:
+	- "webpack-dev-server": "^2.4.2",
+    "webpack-hot-middleware": "^2.17.1" dodamo rucno u posledni dependenci i npm install
+
+* drugi nacin je yarn
+
+* napraviti fajl .babelrc - def configuracije za webpack
+* napraviti fajl webpack.config.js - koristi ga webpack, u njega dodajemo cont, var i sl.
+		entry:['./app/index.js'],
+	itd.
+
+* ovo je uputstvo za pakovanje webpack-u (od cega, gde i kako)
+	loaderi uzimaju fajlove datog tipa da ih webpack spakuje u build fajl
+	exclude - da ne ukljucuje u build paket node_modules gde su svi dependences moduli
+
+* babelrc
+	{
+ 	   "presets": ["react"]
+	}
+* instalacija babela
+
+
+Pogledati:
+node, npm, babel, webpack

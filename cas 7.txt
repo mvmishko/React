@@ -1,0 +1,23 @@
+-- props & state
+
+* PropTypes (validacija)
+	- PropParent.js i ChildComponent.js
+
+* State
+	- ComponentState.js
+	tick = () => {
+        this.setState({
+                count: this.state.count + 1
+            })
+        },()=>{ ovde ide ono sto treba da se izvrsi kad setState zavrsi (call-back funkcija}
+
+* prenos state-a u dubinu i nazad
+	- ChildState.js
+
+* studenti folder mini projekat
+
+	parent komponenta je StudentList koja prosledi jednog studenta child komponenti 
+-- Domaci
+* Ukljuciti slike (webpack.config.js dodati loader za slike - url i file loader)
+* Parent komponenta prikazuje koji studenti su prisutni i odsutni
+* Klik na bilo koje dugme sakriva oba dugmeta i cela komponenta promeni boju (zelena / crvena)

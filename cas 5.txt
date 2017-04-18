@@ -1,0 +1,27 @@
+return  <DefaultKlasa>Neka deca {element2}</DefaultKlasa>
+	- children u return <span>DefaultKlasa {this.props.children}</span> je sve u prethodnom tagu <DefaultKlasa>
+
+ES6 features
+JS prvo prodje kroz sve deklaracije pa onda krene u izvrsenje naredbi
+
+pored var deklaracije promenljive postoje i :
+
+	let - promenljiva sa block scope (oblast vazenja)
+	const - sa dodelom vrednosti koja je nadalje nepromenljiva
+
+	"arnost" funkcije - broj parametara
+	arguments - lista parametara
+	default parametri - sa default vrednosti
+	string templates - ala printf ili stringBuilder
+	object destructor
+	spread i rest operator
+	error function (jedinstveni this u scope)
+	call, bind i apply metode koje setuju kontekst this-a
+	
+kreiramo 	js/let.js
+		js/const.js
+node js/let.js	izvrsenje neke eksterne skripte
+poredjenje 2 objekta - cast u string pa poredjenje
+curring - funkcija koja vraca funkciju
+
+map, reduce, ...

@@ -1,0 +1,30 @@
+-- Nastavak JS6
+
+* Obj.prototype.imefje = function(){  }		dodavanje metode objektu
+
+* pozajmljivanje funkcija ???
+ES6
+* Object destructuring	- laksi pristup propertijima
+	dodali smo destructure.js	
+
+* spread(ili rest - sinonim) operator '...'
+	rest.js
+
+* arrow function =>
+	arrow.js
+
+-- Reack stilovi
+	izgled i stilovi koji zavise od stanja
+* stil je objekat
+* njegova svojstva moraju da budu camileCase 
+	compcss.js i u app importujemo komponentu i return <  />
+	
+* dodali smo folder styles i u njemu style.css
+* require ovog fajla u compcss.js ali mora da se doda i loader zbog webpack-a
+	dodaje se i instaliraju 2 loadera
+	npm install --save css-loader i style-loader
+	i u webpack.config dodamo loadere za style i css
+* za animacije instaliramo react-addons-css-transitions-group
+* ukljucimo ga u klasu nase komponente
+* dodajemo animations.css u styles folder (copy iz deljivog fodera)
+

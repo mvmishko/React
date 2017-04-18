@@ -1,0 +1,48 @@
+* react element
+	opis sta vidimo na strani a ne i fizicki dom elem. To su JS objekti. Njih prevodi jsx u realni DOM
+
+
+* React.createElement(				type - tag, props - atributi, children - sadrzaj
+	type,
+	[prop],
+	[...children]
+
+
+npr. const element = React.createElement(
+			'h1',
+			{clasName:'greetings'},
+			'Pozdrav,
+			)
+
+* npr. ReactGoogleModules 
+	- Git aplikacija za iscrtavanje putanje izmedju 2 grada koja moze da se koristi kao komponenta na strani
+
+
+* React.createClass / ES6 Class Components
+	import React, {PropTypes as p, Component} from 'react'
+	import {Components} from 'react'
+	import {PropTypes as p, Component} from 'react'
+	import * as actions from './actions'
+
+Postoji stari i novi nacin kreiranja komponente (kao u cas 3. index.js)
+
+novi:
+	class MyComponent extends React.Component {
+		render(){
+		return ....
+	}
+
+pored render() moze da sadrzi i druge metode npr konstruktor, lifecycle metode (promene stanja, rerender, db kon. i sl) i privatne metode
+		
+	npr.
+		constructor(){
+			super()
+		}
+	}
+
+propTypes	tipiziranje podataka 
+pure komponenta - stateless funkcija koja radi npr. <plata>1000</plata>	(pure komponenta plata to renderuje npr. u 
+							<span>1.000,00$</span>
+
+{...} moramo da koristimo gde god nam treba js poziv (jer je ovo jsx)
+
