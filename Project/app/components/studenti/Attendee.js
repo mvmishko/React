@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
 var styleNone = {
-    float:'left',margin: 10, padding: 10, backgroundColor: 'gray'
+    float:'left',margin: 10, padding: 15, backgroundColor: 'gray'
 }
 var stylePresent = {
-    float:'left',margin: 10, padding: 10, backgroundColor: 'green'
+    float:'left',margin: 10, padding: 15, backgroundColor: 'green'
 }
 var styleAbsent = {
-    float:'left',margin: 10, padding: 10, backgroundColor: 'red'
+    float:'left',margin: 10, padding: 15, backgroundColor: 'red'
 }
 
 export default class Attendee extends Component {
@@ -45,7 +45,7 @@ export default class Attendee extends Component {
         return (
             <div style = {(!this.state.markPresent && !this.state.markAbsent) ? styleNone : this.state.markPresent?stylePresent:styleAbsent}>
                 <span>id={id} {name}, ({gender})</span><br/>
-                <img src={imgLink} width="200px" alt=""/>
+                <img src={imgLink} width="250px" alt=""/>
                 <div style={ (this.state.markPresent || this.state.markAbsent) ? {display:'none'}:{display:'block'}}>
                     <button onClick={this.present}>
                         <span>present</span>

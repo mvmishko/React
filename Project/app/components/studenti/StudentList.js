@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import studentsData from './studentsData'
 import Attendee from './Attendee.js'
 
+var styleTotal = {
+    float:'right', margin: 10, padding: 25, backgroundColor: 'lightblue', width: 200, height: 250, textAlign: "center"
+}
+var styleP = {
+    fontSize: "20", color: "darkred"
+}
+
 export default class Attendence extends Component {
     constructor(props){
         super(props)
@@ -18,7 +25,8 @@ export default class Attendence extends Component {
         this.setState({
             present: this.state.present + 1,
             unmarked: this.state.unmarked -1,
-            listPresent: this.state.listPresent.concat([idStud]).sort()
+            //listPresent: this.state.listPresent.concat([idStud]).sort()
+            listPresent: [...this.state.listPresent,idStud].sort()
         })
     }
 
@@ -79,11 +87,11 @@ export default class Attendence extends Component {
                     onClickAbsent = {this.absentCount}
                     addStudentPresent = {this.addPresent}
                 />
-                <div>
+                <div style = {styleTotal}> 
                     <h2>Total attendees</h2>
-                    <p>Present = {this.state.present}, [ {this.state.listPresent+" "} ]</p>
-                    <p>Absent: {this.state.absent}, [ {this.state.listAbsent+" "}]</p>
-                    <p>Unmarked: {this.state.unmarked}</p>
+                    <p style={styleP}>Present = {this.state.present}, [ {this.state.listPresent + " "} ]</p>
+                    <p style={styleP}>Absent: {this.state.absent}, [ {this.state.listAbsent + " "}]</p>
+                    <p style={styleP}>Unmarked: {this.state.unmarked}</p>
                 </div>
             </div>
         );
